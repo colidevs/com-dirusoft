@@ -13,8 +13,14 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
       <body className="container m-auto grid min-h-screen grid-rows-[auto,1fr,auto] bg-background bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] px-4 font-sans antialiased">
-        <header className="text-xl font-bold leading-[4rem]">
+        <header className="flex text-xl font-bold leading-[4rem]">
           <Link href="/">Dirusoft</Link>
+          <p className="flex-1 space-x-8 text-center">
+            <Link href="/">Process</Link>
+            <Link href="/">Work</Link>
+            <Link href="/">Services</Link>
+          </p>
+          <Link href="/">About</Link>
         </header>
         <main className="py-8">{children}</main>
         <footer className="text-center leading-[4rem] opacity-70">
