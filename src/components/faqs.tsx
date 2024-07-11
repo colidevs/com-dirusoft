@@ -5,41 +5,43 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+const faqs = [
+  {
+    question: "What is the logo design process?",
+    answer: "Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+  {question: "How much does a logo design cost", answer: "None"},
+  {question: "How long does it take to design a logo", answer: "None"},
+  {question: "Do you offer custom logo design or use templates?", answer: "None"},
+  {question: "Can you redesign my existing logo?", answer: "None"},
+  {question: "What if I don't like the initial concepts?", answer: "None"},
+  {question: "How do I get started?", answer: "None"},
+  {question: "What payment methods do you accept?", answer: "None"},
+];
+
+let keys = 0;
+
 export default function Faqs() {
   return (
-    <Accordion collapsible className=" text-white" type="single">
-      <AccordionItem value="item-1">
-        <AccordionTrigger>What is the logo design process?</AccordionTrigger>
-        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-2">
-        <AccordionTrigger>How much does a logo design cost</AccordionTrigger>
-        <AccordionContent>None </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-3">
-        <AccordionTrigger>How long does it take to desing a logo</AccordionTrigger>
-        <AccordionContent>None</AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-4">
-        <AccordionTrigger>Do you offer custom logo design or use templates?</AccordionTrigger>
-        <AccordionContent>None </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-5">
-        <AccordionTrigger>Can you redising my existing logo?</AccordionTrigger>
-        <AccordionContent>None </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-6">
-        <AccordionTrigger>What if i dont like the initial concepts?</AccordionTrigger>
-        <AccordionContent>None</AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-7">
-        <AccordionTrigger>How do i get started?</AccordionTrigger>
-        <AccordionContent>None</AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-8">
-        <AccordionTrigger>What payment methods do you accept?</AccordionTrigger>
-        <AccordionContent>None</AccordionContent>
-      </AccordionItem>
-    </Accordion>
+    <article className="flex flex-col justify-center">
+      <header className="m-2 flex-col text-center text-white">
+        <h1 className=" m-2 text-8xl font-semibold">Our Faqs</h1>
+        <p className="text-xl text-gray-100/70">The most common question we get asked</p>
+      </header>
+      <section className="flex">
+        <Accordion collapsible className=" mx-auto bg-black text-white" type="single">
+          {faqs.map((fq, index) => {
+            keys++;
+
+            return (
+              <AccordionItem key={keys} value={`item-${index}`}>
+                <AccordionTrigger>{fq.question}</AccordionTrigger>
+                <AccordionContent>{fq.answer}</AccordionContent>
+              </AccordionItem>
+            );
+          })}
+        </Accordion>
+      </section>
+    </article>
   );
 }
