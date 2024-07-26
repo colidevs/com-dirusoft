@@ -1,6 +1,6 @@
 import type {Metadata} from "next";
 
-import {Inter, Victor_Mono} from "next/font/google";
+import {Inter} from "next/font/google";
 import Link from "next/link";
 
 import "./globals.css";
@@ -19,18 +19,18 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html className="dark" lang="en">
       <body
-        className={`${inter.className} relative min-h-screen bg-[#0d0d0d] text-sm text-slate-50 antialiased`}
+        className={`${inter.className} relative min-h-screen overflow-x-hidden bg-zinc-950 text-sm text-slate-50 antialiased`}
       >
-        <div className="absolute top-0 z-[-2] h-screen w-screen bg-[radial-gradient(ellipse_80%_80%_at_20%_-20%,#1e5ab4d8,#0d0d0d)] blur-[100px]" />
-        {/* <div className="absolute z-20 h-56 w-full overflow-visible bg-[#1e5ab4d8] opacity-50 blur-[100px]" /> */}
-        <div className="sticky top-0 z-10 h-auto w-full border-b border-slate-50/15">
+        <div className="absolute top-0 -z-[6] h-screen w-screen bg-[radial-gradient(ellipse_60%_70%_at_50%_-5%,#1e5ab4d8,#09090b)] blur-[100px]" />
+        <div className="absolute inset-0 -z-[4] h-full w-full bg-background/0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]" />
+        <div className="sticky top-0 z-10 h-auto w-full border-b border-zinc-50/15">
           <header className="flex h-min w-full items-center justify-center overflow-hidden px-28 py-5 backdrop-blur">
             <nav className="relative flex max-w-5xl flex-1 items-center justify-between overflow-hidden p-0">
               <Link className="font-bold" href="/">
                 Dirusoft
               </Link>
               <div className="flex h-min w-min items-center justify-center gap-7">
-                <Link href="/">Process</Link>
+                <Link href="#process">Process</Link>
                 <Link href="/">Work</Link>
                 <Link href="/">Services</Link>
                 <Link href="/">About</Link>
@@ -41,9 +41,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           </header>
         </div>
         <main className="py-8">{children}</main>
-        {/* <footer className="text-center leading-[4rem] opacity-70">
-          © {new Date().getFullYear()} com-dirusoft
-        </footer> */}
+        <footer className="text-center leading-[4rem] opacity-70">
+          © {new Date().getFullYear()} dirusoft
+        </footer>
       </body>
     </html>
   );
