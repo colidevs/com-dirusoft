@@ -22,7 +22,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         className={`${inter.className} relative min-h-screen overflow-x-hidden bg-black text-sm text-zinc-50 antialiased`}
       >
         <div className="absolute top-0 -z-[6] h-screen w-screen bg-[radial-gradient(ellipse_50%_55%_at_50%_-5%,#1e5ab4d8,#000000)] blur-[100px]" />
-        <div className="absolute inset-0 -z-[4] h-full w-full bg-background/0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] opacity-60" />
+        <div className="absolute inset-0 -z-[4] h-full w-full bg-background/0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] opacity-80" />
         <div className="sticky top-0 z-10 h-auto w-full border-b border-zinc-50/15">
           <header className="flex h-min w-full justify-center overflow-hidden px-28 py-5 backdrop-blur">
             <nav className="relative flex max-w-5xl flex-1 justify-between overflow-hidden p-0">

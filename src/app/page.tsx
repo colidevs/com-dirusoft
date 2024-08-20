@@ -40,10 +40,10 @@ export default function HomePage() {
       </section>
       <section className="m-auto mb-16 flex max-w-4xl flex-col gap-40">
         <Card
-          className="relative flex-1 border-[1px] border-blue-500/10 bg-black/60 p-8 transition-all duration-1000 hover:border-blue-500/25"
+          className="relative flex-1 border-[1px] border-blue-500/25 bg-black/60 p-8 transition-all duration-1000 hover:border-blue-500/40"
           id="process"
         >
-          <div className="absolute -left-0 top-0 h-full w-[1px] bg-gradient-to-b from-transparent via-blue-500 to-transparent opacity-50 shadow-xl" />
+          <div className="absolute -left-5 top-0 h-full w-[1px] bg-gradient-to-b from-transparent via-blue-500 to-transparent opacity-50 shadow-xl" />
           <div className="absolute -z-[6] h-screen w-screen bg-[radial-gradient(ellipse_10%_40%_at_0%_-10%,#1e5ab4d8,#000000)] blur-[100px]" />
           <CardHeader className="mb-8 p-0 py-4">
             <H2 text="Process" />
